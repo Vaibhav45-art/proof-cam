@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Proof Cam – Fraud Detector</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Splash Screen -->
+  <div id="splash">
+    <img src="assets/logo.png" alt="Logo">
+    <h2>Proof Cam by Vaibhav</h2>
+    <p>Loading AI Fraud Detector...</p>
+  </div>
+
+  <!-- Main App UI -->
+  <div id="mainApp" style="display: none;">
+    <h1>🕵️ Proof Cam – Fraud Detector</h1>
+    <p><strong>Founder:</strong> Vaibhav Gupta – A passionate student developer</p>
+
+    <input type="file" accept="image/*" id="imageInput"><br>
+    <img id="previewImg" src="" alt="Preview"><br>
+
+    <button id="scanBtn">🔍 Scan Image</button>
+    <button id="downloadBtn" disabled>📥 Download Result</button>
+
+    <div id="result">
+      <h3>Extracted Text:</h3>
+      <pre id="outputText">No text yet...</pre>
+    </div>
+
+    <footer>
+      <hr>
+      <p><strong>About:</strong> Proof Cam is built by Vaibhav, a student passionate about creating apps that help the public and fight fraud. This tool scans documents and detects possible fake information using AI.</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.4/dist/tesseract.min.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('splash').style.display = 'none';
+        document.getElementById('mainApp').style.display = 'block';
+      }, 2000);
+    });
+  </script>
+
+</body>
+</html>
